@@ -12,5 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/home');
+});
+
+Route::get('/coffee', function () {
+    return view('pages/coffee');
+});
+
+Route::get('/about', function () {
+    return view('pages/about');
+});
+
+Route::get('/login', function () {
+    return view('pages/login');
+});
+
+Route::get('/user/{id}', function () {
+    return view('pages/user');
 });
