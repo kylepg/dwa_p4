@@ -30,3 +30,7 @@ Route::get('/login', function () {
 Route::get('/user/{id}', function () {
     return view('pages/user');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
