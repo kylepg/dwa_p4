@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['resources/assets/scss/*.scss', 'resources/assets/sass/*.scss'],
-        tasks: ['newer:sass', 'notify:done'],
+        tasks: ['sass', 'notify:done'],
       },
     },
 
@@ -24,7 +24,6 @@ module.exports = function(grunt) {
     sass: {
       min: {
         options: {
-          gruntLogHeader: false,
           style: 'compressed',
         },
         files: {
@@ -126,6 +125,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-babel');
   grunt.loadNpmTasks('grunt-cache-breaker');
   grunt.loadNpmTasks('grunt-notify');
-  grunt.loadNpmTasks('grunt-newer');
   grunt.registerTask('default', ['watch']);
 };

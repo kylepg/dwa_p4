@@ -1,0 +1,166 @@
+/*============================
+=            HOME            =
+=============================*/
+
+h3 {
+    font-size: 25px;
+    position: relative;
+    font-family: 'Pangolin', sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+    position: relative;
+}
+
+.block.overview {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    h3 {
+        margin-top: 0px;
+    }
+    p {
+        margin: 0;
+    }
+    .step-wrap {
+        display: flex;
+        background-color: #ffffff;
+        background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+        /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+        font-size: 1.2em;
+        align-items: left;
+        flex-direction: column;
+        padding: 25px 45px;
+        border-radius: 1px;
+        background-color: #fbf5f2;
+        -moz-box-box-shadow: 5px 10px 23px rgba(33, 33, 33, 0.5);
+        /* Safari+Chrome */
+        -webkit-box-shadow: 5px 10px 23px rgba(33, 33, 33, 0.5);
+        /* Opera */
+        box-shadow: 5px 10px 23px rgba(33, 33, 33, 0.5);
+        -o-transform: rotate(-2deg);
+        -webkit-transform: rotate(-2deg);
+        -moz-transform: rotate(-2deg);
+        &>div {
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+    }
+    .step {
+        display: flex;
+        .step-circle {
+            font-size: 0.7em;
+            font-family: 'Pangolin' sans-serif;
+            font-weight: 600;
+            background-color: rgba(142, 104, 92, .08);
+            margin-right: 10px;
+            height: 30px;
+            width: 30px;
+            border: 1px solid #212121;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .step-text {
+            a {
+                font-size: 1.1em;
+            }
+            .step-description {
+                display: flex;
+                flex-direction: column;
+                font-size: .8em;
+                font-weight: 100;
+            }
+        }
+        &:last-child {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.block.pay {
+    align-items: center;
+    .qty-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    .qty-btn-wrap {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        p {
+            margin: 0;
+        }
+        .qty-btn {
+            cursor: pointer;
+            &.inactive {
+                opacity: .3;
+            }
+            &.add {
+                margin-right: 10px;
+            }
+            &.subtract {
+                padding-bottom: 4px;
+                margin-left: 10px;
+                font-size: 1.2em;
+            }
+            &:hover:not(.inactive) {
+                color: $black;
+                border-color: $black;
+            }
+            color: $primary;
+            font-size: 1em;
+            height: 25px;
+            width: 25px;
+            border: 1px solid $primary;
+            background-color: #efe2d7;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+    }
+    .pay-btn {
+        font-size: 28px;
+        border-radius: 50px;
+        padding: 6px 30px 3px 30px;
+        span {
+            padding: 0px 10px;
+        }
+    }
+}
+
+.block.inventory {
+    .inventory-header {
+        h2 {
+            margin: 0;
+        }
+        p {
+            margin-top: 0;
+            font-weight: 100;
+        }
+    }
+    .inventory-item {
+        font-size: 20px;
+        p {
+            margin-bottom: 2px;
+        }
+        .inventory-status {
+            font-weight: 600;
+            &.low {}
+            &.high {}
+            &.out {}
+        }
+        border-bottom: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+    }
+}

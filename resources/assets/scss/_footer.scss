@@ -1,0 +1,22 @@
+/*==============================
+=            FOOTER            =
+===============================*/
+
+footer {
+    text-align: center;
+    color: #fff;
+    background-color: #212121;
+    padding: 0px;
+    width: 100%;
+    bottom: 0;
+    margin: 80px 0px 0px 0px !important;
+    position: absolute;
+    a {
+        color: $primary;
+        &:hover,
+        &:active,
+        &:focus {
+            color: white;
+        }
+    }
+}
