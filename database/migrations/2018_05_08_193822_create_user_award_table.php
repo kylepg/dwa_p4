@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInventoryTable extends Migration
+class CreateUserAwardTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateInventoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('inventory', function (Blueprint $table) {
+        Schema::create('user_award', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('product_name');
-            $table->string('status');
-            $table->string('status_updated_at');
-            $table->integer('last_edited_by');
-            $table->decimal('cost', 8, 2);
+            $table->integer('award_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+
+            # Make foreign keys
+            $table->foreign('award_id')->references('id')->on('awards');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -31,6 +32,6 @@ class CreateInventoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inventory');
+        Schema::dropIfExists('user_award');
     }
 }

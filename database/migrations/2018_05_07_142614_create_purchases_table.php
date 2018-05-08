@@ -16,11 +16,14 @@ class CreatePurchasesTable extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('purchased_by');
-            $table->integer('product_id');
+            $table->integer('user_id')->unsigned();
+            $table->integer('product_id')->unsigned();
             $table->integer('quantity');
-            $table->decimal('product_cost', 8, 2);
-            $table->decimal('total_cost', 8, 2);
+            $table->integer('total_cost');
+
+            # Make foreign keys
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 
@@ -31,6 +34,10 @@ class CreatePurchasesTable extends Migration
      */
     public function down()
     {
+        # combine tablename + fk field name + the word "foreign"
+        $table->dropForeign('purchases_user_id_foreign');
+        $table->dropForeign('purchases_product_id_foreign');
+        
         Schema::dropIfExists('purchases');
     }
 }
