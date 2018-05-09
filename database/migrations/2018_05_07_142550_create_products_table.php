@@ -19,11 +19,11 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('status');
             $table->string('status_updated_at');
-            $table->integer('last_edited_by')->unsigned();
+            $table->integer('last_updated_by')->unsigned();
             $table->integer('price');
 
             # Make foreign keys
-            $table->foreign('last_edited_by')->references('id')->on('users');
+            $table->foreign('last_updated_by')->references('id')->on('users');
         });
     }
 
@@ -36,7 +36,7 @@ class CreateProductsTable extends Migration
     {
 
         # combine tablename + fk field name + the word "foreign"
-        $table->dropForeign('products_last_edited_by_foreign');
+        $table->dropForeign('products_last_updated_by_foreign');
         Schema::dropIfExists('products');
     }
 }

@@ -10,7 +10,6 @@ return [
         '/'             => 'home',
         'coffee'        => 'coffee',
         'about'         => 'about',
-        'login'         => 'log in'
     ],
 
     /*
@@ -170,6 +169,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ViewServiceProvider::class,
 
     ],
 

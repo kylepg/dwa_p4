@@ -1,0 +1,35 @@
+/*===============================
+=            ACCOUNT            =
+================================*/
+
+.block.account {
+    .btn {
+        margin-top: 10px;
+        padding: 5px 20px;
+        border: 1px solid $primary;
+        background-color: $primary;
+        transition-duration: 0.2s;
+        font-family: 'Pangolin', sans-serif;
+        font-size: 20px;
+        align-self: center;
+        cursor: pointer;
+        &:hover {
+            background-color: $black;
+        }
+        &:focus {
+            outline: none;
+        }
+        a {
+            color: white !important;
+        }
+        border-radius: 20px;
+        a:hover::after,
+        a.active::after {
+            display: none;
+        }
+    }
+    .title-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+}

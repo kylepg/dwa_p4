@@ -1,0 +1,113 @@
+/*=============================
+=            LOGIN            =
+==============================*/
+
+.block.register {
+    align-items: center;
+    h2 {
+        font-weight: 400;
+    }
+    label {
+        font-weight: 400;
+        font-size: 16px;
+        color: $black;
+        font-family: 'Pangolin', sans-serif;
+    }
+    input {
+        color: $black;
+        display: block;
+        width: 100%;
+        font-size: 1.3rem;
+        padding: 3px;
+        background-color: rgba(142, 104, 92, 0.08);
+        border: 1px solid #b8b8b8;
+        margin-bottom: 25px;
+        height: 35px;
+        opacity: .5;
+        &:focus {
+            outline: $primary auto 5px;
+            opacity: 1;
+        }
+        font-family: 'Open Sans' sans-serif;
+        font-weight: 100;
+        font-size: 16px;
+    }
+    .option-wrap {
+        a:nth-child(1) {
+            margin-right: 30px;
+        }
+        a:nth-child(2) {
+            margin-left: 30px;
+        }
+        margin-bottom: 20px;
+        font-size: 20px;
+        width: 200px;
+        display: flex;
+        a {
+            position: relative;
+            opacity: .3;
+            text-decoration: none;
+            color: $primary;
+        }
+        a.active {
+            opacity: 1;
+        }
+        a:visited,
+        a:hover,
+        a:active {
+            opacity: 1;
+            text-decoration: none;
+            color: $primary;
+        }
+    }
+    form {
+        min-width: 475px;
+        display: flex;
+        background-color: #ffffff;
+        background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+        /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+        font-size: 1.2em;
+        align-items: left;
+        flex-direction: column;
+        padding: 25px 45px;
+        border-radius: 1px;
+        background-color: #fbf5f2;
+        -moz-box-box-shadow: 5px 10px 23px rgba(33, 33, 33, 0.5);
+        /* Safari+Chrome */
+        -webkit-box-shadow: 5px 10px 23px rgba(33, 33, 33, 0.5);
+        /* Opera */
+        box-shadow: 5px 10px 23px rgba(33, 33, 33, 0.5);
+        &>div {
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            margin-top: 10px;
+            padding: 5px 20px;
+            border: 1px solid $primary;
+            background-color: $primary;
+            transition-duration: 0.2s;
+            font-family: 'Pangolin', sans-serif;
+            font-size: 20px;
+            align-self: center;
+            cursor: pointer;
+            &:hover {
+                background-color: $black;
+            }
+            &:focus {
+                outline: none;
+            }
+            a {
+                color: white !important;
+            }
+            border-radius: 20px;
+            a:hover::after,
+            a.active::after {
+                display: none;
+            }
+        }
+    }
+    input:-webkit-autofill {
+        background-color: transparent !important;
+    }
+}

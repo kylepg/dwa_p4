@@ -6,6 +6,8 @@
 @import 'header';
 @import 'home';
 @import 'footer';
+@import 'login';
+@import 'account';
 @import 'mixins/positioning';
 /*============================
 =            MISC            =
@@ -58,7 +60,7 @@ a {
 .block {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .login-overlay {

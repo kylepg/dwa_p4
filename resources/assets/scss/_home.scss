@@ -2,26 +2,25 @@
 =            HOME            =
 =============================*/
 
-h3 {
-    font-size: 25px;
-    position: relative;
-    font-family: 'Pangolin', sans-serif;
-}
-
 h2 {
     font-size: 30px;
     font-weight: 400;
     position: relative;
 }
 
+h3 {
+    font-size: 25px;
+}
+
 .block.overview {
-    padding-top: 20px;
+    padding-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-items: center;
     h3 {
         margin-top: 0px;
+        font-family: 'Pangolin', sans-serif;
     }
     p {
         margin: 0;
@@ -142,25 +141,66 @@ h2 {
     .inventory-header {
         h2 {
             margin: 0;
+            display: inline-block;
         }
         p {
             margin-top: 0;
             font-weight: 100;
         }
     }
+    .edit-icon {
+        margin-left: 14px;
+        position: relative;
+        bottom: -1px;
+        width: 20px;
+        cursor: pointer;
+        &:hover {}
+    }
     .inventory-item {
         font-size: 20px;
+        position: relative;
         p {
             margin-bottom: 2px;
         }
         .inventory-status {
             font-weight: 600;
-            &.low {}
-            &.high {}
-            &.out {}
+            &.low {
+                color: $orange;
+            }
+            &.high {
+                color: $green;
+            }
+            &.out {
+                color: $red;
+            }
         }
         border-bottom: 1px solid gray;
         display: flex;
         justify-content: space-between;
+    }
+    .delete-btn {
+        cursor: pointer;
+        &.inactive {
+            opacity: .3;
+        }
+        padding-bottom: 4px;
+        font-size: 1.2em;
+        &:hover {
+            opacity: 1;
+        }
+        color: $red;
+        font-size: 1em;
+        height: 25px;
+        width: 25px;
+        border: 1px solid $red;
+        background-color: #efe2d7;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        position: absolute;
+        top: 22px;
+        left: -37px;
     }
 }

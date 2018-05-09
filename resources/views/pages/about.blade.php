@@ -1,5 +1,6 @@
 @extends('layouts.master') 
 @section('content')
+<h2>About</h2>
 <p>Lorem ipsum dolor sit amet, ei sea viris commune, ad mei fabellas deserunt. At eam elit omnium, eu has odio definitiones.
     Eam causae timeam ea. Duo cu vide novum. Ad sed decore referrentur, amet dicat mazim no sed, ea est veniam decore ullamcorper.
     In vix exerci dolores efficiantur.</p>
