@@ -49,7 +49,6 @@
         <h2>Inventory</h2><img class="edit-icon" src="/images/edit.svg" alt="Edit icon" />
         <p>Updated at <span style="font-weight: 400">{{ $updated_at }}</span> by <span style="font-weight: 400">{{ $updated_by_fn }} {{ $updated_by_ln }}</span></p>
     </div>
-    @foreach()
     <div class="inventory-item">
         <div class="delete-btn inactive">-</div>
         <p>Cold Brew</p>
